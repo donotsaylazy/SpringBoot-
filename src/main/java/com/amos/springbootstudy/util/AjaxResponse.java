@@ -6,7 +6,7 @@ import lombok.Data;
 @Data
 public class AjaxResponse {
 
-    private int code;  //200 400 500
+    private int code;  //200 400 500  方法
     private String msg;
     private Object data;
 
