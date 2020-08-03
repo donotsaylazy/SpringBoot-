@@ -6,16 +6,25 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.Date;
 
 @Slf4j
 @RestController
+@RequestMapping("/test")
 public class ActicleRustFulController {
 
 
+    //接口信息
+   // @ApiOperation(value = "添加文章", notes="添加新的文章", tags="Article", httpMethod = "POST")
+    //参数详情
+    //@ApiImplicitParams()
+    //接口响应详情
+    //@ApiResponses()
     //根据article id查询文章  get查询
    @RequestMapping(value = "articles/{id}",method = RequestMethod.GET)
-    public AjaxResponse getArticle(@PathVariable("id") String id){
+    public AjaxResponse getArticle(@PathVariable("id") String id, HttpServletResponse response, HttpServletRequest httpRequest){
 
         Article article=Article.builder()
                 .id(1)

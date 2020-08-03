@@ -8,6 +8,9 @@ import org.springframework.http.converter.HttpMessageNotWritableException;
 
 import java.io.IOException;
 
+/**
+ * 接口传参、返回自定义格式化，springboot默认为json
+ */
 public class XmlHttpMessageConverter extends AbstractHttpMessageConverter<AjaxResponse> {
     @Override
     protected boolean supports(Class<?> clazz) {

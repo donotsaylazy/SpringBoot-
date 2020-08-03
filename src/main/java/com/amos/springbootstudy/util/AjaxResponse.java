@@ -1,11 +1,14 @@
 package com.amos.springbootstudy.util;
 
 
+
 import lombok.Data;
 
+//@ApiModel(value = "通用响应数据接口类")
 @Data
 public class AjaxResponse {
 
+    //@ApiModelProperty(value = "请求响应码")
     private int code;  //200 400 500  方法
     private String msg;
     private Object data;
